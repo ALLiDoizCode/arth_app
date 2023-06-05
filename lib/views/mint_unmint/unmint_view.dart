@@ -52,8 +52,8 @@ class UnMintView extends ConsumerWidget {
                   children: [
                     if (unmint.depositAccount != null) ...[
                       const SizedBox(height: 20),
-                      const Row(
-                        children: [Text("Owner")],
+                       Row(
+                        children: const [Text("Owner")],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,8 +78,8 @@ class UnMintView extends ConsumerWidget {
                         ],
                       ),
                       const SizedBox(height: 10),
-                      const Row(
-                        children: [Text("SubAccount")],
+                      Row(
+                        children: const [Text("SubAccount")],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,8 +108,8 @@ class UnMintView extends ConsumerWidget {
                         ],
                       ),
                       const SizedBox(height: 10),
-                      const Row(
-                        children: [Text("Account balance")],
+                      Row(
+                        children: const [Text("Account balance")],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

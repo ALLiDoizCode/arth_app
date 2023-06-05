@@ -3,6 +3,7 @@ import 'package:arth_app/common/enums/scan_type.dart';
 import 'package:arth_app/common/enums/states.dart';
 import 'package:arth_app/common/utils/amount_utils.dart';
 import 'package:arth_app/providers/ckbtc_provider/ckbtc_provider.dart';
+import 'package:arth_app/services/payid/payid_service.dart';
 import 'package:arth_app/views/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -35,7 +36,7 @@ class SendView extends ConsumerWidget {
               TextFormField(
                 controller: sendN.addressController,
                 decoration: InputDecoration(
-                  labelText: "Principal",
+                  labelText: "PayId",
                   suffixIcon: IconButton(
                     onPressed: () async {
                       String? p = await context.push("/scan", extra: ScanType.principal);
@@ -131,14 +132,18 @@ class SendView extends ConsumerWidget {
               ),
               const Expanded(child: SizedBox(height: 100)),
               CoolButton(
-                onTapUp: sendN.isValid()
-                    ? () {
-                        bool valid = sendFormKey.currentState?.validate() ?? false;
+                onTapUp: /*sendN.isValid()
+                    ?*/ () {
+                        PayIdService().fetchAddresses("AlliDoizCode\$awesome.com","icp","mainnet");
+                       /* print(result.first.addressDetails.address);
+                        print(result.first.environment);
+                        print(result.first.paymentNetwork);*/
+                        /*bool valid = sendFormKey.currentState?.validate() ?? false;
                         if (valid) {
                           showSendDialog(context);
-                        }
+                        }*/
                       }
-                    : null,
+                    /*: null*/,
                 child: Text(
                   "Send",
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),

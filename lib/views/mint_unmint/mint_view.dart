@@ -48,8 +48,8 @@ class MintView extends ConsumerWidget {
                     const SizedBox(
                       height: 40,
                     ),
-                    const Row(
-                      children: [Text("Your bitcoin address")],
+                    Row(
+                      children: const [Text("Your bitcoin address")],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,8 +72,8 @@ class MintView extends ConsumerWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Row(
-                      children: [Text("Balance")],
+                    Row(
+                      children: const [Text("Balance")],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,15 +150,15 @@ class MintView extends ConsumerWidget {
                                         ),
                                       ],
                                       if (minter.loading) ...[
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
+                                         Padding(
+                                          padding: const EdgeInsets.all(8.0),
                                           child: Row(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
                                               Center(
                                                 child: Column(
                                                   mainAxisSize: MainAxisSize.min,
-                                                  children: [
+                                                  children: const [
                                                     SizedBox(
                                                       height: 10,
                                                     ),

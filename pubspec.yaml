@@ -7,7 +7,7 @@ environment:
   sdk: '>=2.19.6 <3.0.0'
 
 dependencies:
-  agent_dart: ^1.0.0-dev.13
+  agent_dart: ^1.0.0-dev.14
   cupertino_icons: ^1.0.2
   flex_color_scheme: ^7.0.4
   flutter:
